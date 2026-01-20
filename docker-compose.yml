@@ -4,7 +4,6 @@ services:
     image: jedrzejme/dynamic-dns-using-cloudflare
     container_name: dynamic-dns-using-cloudflare
     environment:
-      - AUTORUN=
       - INTERVAL=
       - API_TOKEN=
       - ZONE_IDENTIFIER=
