@@ -7,8 +7,10 @@ import os
 from cloudflare import Cloudflare as cloudflare
 import requests
 import time
+from dotenv import load_dotenv
 
 # --- Read environment variables ---
+load_dotenv()
 interval = int(os.getenv('INTERVAL', '300'))
 api_token = os.getenv('API_TOKEN')
 zone_identifier = os.getenv('ZONE_IDENTIFIER')
