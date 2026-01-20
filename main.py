@@ -35,7 +35,7 @@ def get_dns_id():
 
     domain_id = None
     for record in dns_list:
-        if record.name == f"{name}.{domain}":
+        if record.name == f"{name}.{domain}" and record.type == "A":
             domain_id = record.id
             break
 
