@@ -1,7 +1,7 @@
 version: '3'
 services:
   dynamic-dns-using-cloudflare:
-    image: jedrzejme/dynamic-dns-using-cloudflare
+    image: jedrzejme/dynamic-dns-using-cloudflare:latest
     container_name: dynamic-dns-using-cloudflare
     environment:
       - INTERVAL=
