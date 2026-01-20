@@ -7,6 +7,8 @@ import os
 from cloudflare import Cloudflare as cloudflare
 import requests
 import time
+import logging
+import sys
 from dotenv import load_dotenv
 
 # --- Read environment variables ---
@@ -20,10 +22,24 @@ ttl = int(os.getenv('TTL', '1'))
 proxied = os.getenv('PROXIED', 'False').lower() in ('true', '1', 't')
 comment = os.getenv('COMMENT', '')
 
+# --- Configure logging ---
+logging.basicConfig(
+    level=logging.INFO,       # minimalny poziom logów
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    stream=sys.stdout         # <- ważne! stdout dla Docker Logs
+)
+
+logger = logging.getLogger(__name__)
+
 # --- Function to get current public IP address ---
 def get_public_ip():
     response = requests.get('https://api.ipify.org')
-    return response.text.strip()
+    if response.status_code != 200:
+        logger.error("Failed to get public IP address")
+        raise Exception("Failed to get public IP address")
+    else:
+        logger.info(f"Current public IP address: {response.text.strip()}")
+        return response.text.strip()
 
 # --- Cloudflare API ---
 # Initialize Cloudflare client
