@@ -11,7 +11,7 @@
 </h1>
 
 <div align = 'center'>
-    <a href = 'https://github.com/(https://github.com/jbakalarski/DynamicDNSUsingCloudflare/wiki/Config-File)(https://github.com/jbakalarski/DynamicDNSUsingCloudflare/wiki/Config-File)/DynamicDNSUsingCloudflare/'>
+    <a href = 'https://github.com/jbakalarski/DynamicDNSUsingCloudflare'>
         <img src = 'https://img.shields.io/github/stars/jbakalarski/DynamicDNSUsingCloudflare?style=for-the-badge&color=%23cfb002'/>
     </a>
     <a href = 'https://github.com/jbakalarski/DynamicDNSUsingCloudflare/tags'>
