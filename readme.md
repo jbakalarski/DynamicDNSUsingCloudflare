@@ -35,7 +35,6 @@
 
 **❓ What did I use?**
 * [Python](https://www.python.org/)
-* [Python libraries](/requirements.txt)
 * [Docker](https://www.docker.com/)
 * [Cloudflare API](https://developers.cloudflare.com/api/)
 * [Getting IP Address](https://www.ipify.org/)
